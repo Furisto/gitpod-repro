@@ -6,3 +6,5 @@ RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v3.19.1/p
     rm protoc-3.19.1-linux-x86_64.zip
 
 ENV PATH="/usr/local/protobuf:${PATH}"
+
+RUN sleep 600
