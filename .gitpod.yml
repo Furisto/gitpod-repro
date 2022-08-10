@@ -13,3 +13,7 @@ github:
   prebuilds:
     branches: true
     pullRequestsFromForks: true
+hostRequirements:
+  cpu: 6
+  memory: 3288mb
+  storage: 30gb
