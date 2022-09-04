@@ -1,8 +1,6 @@
-FROM gitpod/workspace-full-vnc
+FROM ubuntu:22.04
 
-RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v3.19.1/protoc-3.19.1-linux-x86_64.zip &&\
-    sudo unzip protoc-3.19.1-linux-x86_64.zip -d /usr/local/protobuf &&\
-    sudo chown -R gitpod /usr/local/protobuf &&\
-    rm protoc-3.19.1-linux-x86_64.zip
-
-ENV PATH="/usr/local/protobuf:${PATH}"
+RUN apt-get update && apt-get install -y sudo podman git runc strace curl docker.io
+RUN addgroup --gid 33333 gitpod \
+  && adduser --home /home/gitpod --disabled-login --shell /bin/bash --gid 33333 --uid 33333 gitpod \
+  && echo '%gitpod ALL=NOPASSWD:ALL' >> /etc/sudoers
