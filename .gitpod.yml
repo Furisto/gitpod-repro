@@ -13,3 +13,7 @@ github:
   prebuilds:
     branches: true
     pullRequestsFromForks: true
+workspaceRequirements:
+  class:
+  - g1-standard
+  - g1-large
