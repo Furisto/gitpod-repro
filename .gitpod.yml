@@ -14,4 +14,4 @@ github:
     branches: true
     pullRequestsFromForks: true
 workspaceRequirements:
-  class: g1-standard
+  class: small
