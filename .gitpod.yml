@@ -15,5 +15,6 @@ github:
     pullRequestsFromForks: true
 workspaceRequirements:
   class:
-  - g1-standard
-  - g1-large
+  - unknown
+  - small
+  - default
