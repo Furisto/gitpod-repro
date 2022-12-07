@@ -1,15 +1,3 @@
-image:
-  file: .gitpod.Dockerfile
 tasks:
-  - init: |
-      go get github.com/spf13/cobra/cobra
-      go build
-    command: |
-      ./mycli --help
-vscode:
-  extensions:
-    - golang.go
-github:
-  prebuilds:
-    branches: true
-    pullRequestsFromForks: true
+  - name: Run Supertokens core
+    command: docker run -it supertokens/supertokens-mysql:3.12
