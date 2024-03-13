@@ -1,8 +1,7 @@
-FROM gitpod/workspace-full-vnc
+FROM gitpod/workspace-full:latest
 
-RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v3.19.1/protoc-3.19.1-linux-x86_64.zip &&\
-    sudo unzip protoc-3.19.1-linux-x86_64.zip -d /usr/local/protobuf &&\
-    sudo chown -R gitpod /usr/local/protobuf &&\
-    rm protoc-3.19.1-linux-x86_64.zip
+RUN bash -c 'VERSION="18.19.0" \
+    && source $HOME/.nvm/nvm.sh && nvm install $VERSION \
+    && nvm use $VERSION && nvm alias default $VERSION'
 
-ENV PATH="/usr/local/protobuf:${PATH}"
+RUN echo "nvm use default &>/dev/null" >> ~/.bashrc.d/51-nvm-fix

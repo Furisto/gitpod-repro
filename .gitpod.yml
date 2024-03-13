@@ -1,15 +1,2 @@
 image:
   file: .gitpod.Dockerfile
-tasks:
-  - init: |
-      go get github.com/spf13/cobra/cobra
-      go build
-    command: |
-      ./mycli --help
-vscode:
-  extensions:
-    - golang.go
-github:
-  prebuilds:
-    branches: true
-    pullRequestsFromForks: true
