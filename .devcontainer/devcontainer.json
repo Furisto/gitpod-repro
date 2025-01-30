@@ -1,0 +1,20 @@
+{
+	"name": "Node.js & TypeScript",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+	"features": {
+	  "ghcr.io/devcontainers/features/aws-cli:1": {}
+	},
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+		  "yzhang.markdown-all-in-one",
+		  "redhat.vscode-yaml",
+		  "ms-vscode.vscode-typescript-next"
+		]
+	  }
+	},
+	"containerEnv": {
+	  "AWS_CONFIG_FILE": ".aws/config",
+	  "AWS_REGION": "us-west-2"
+	}
+  }
